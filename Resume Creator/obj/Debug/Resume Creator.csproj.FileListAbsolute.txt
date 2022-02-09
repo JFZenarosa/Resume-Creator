@@ -1,0 +1,16 @@
+X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\bin\Debug\Resume Creator.exe.config
+X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\bin\Debug\Resume Creator.exe
+X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\bin\Debug\Resume Creator.pdb
+X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\bin\Debug\BouncyCastle.Crypto.dll
+X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\bin\Debug\itextsharp.dll
+X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\bin\Debug\Newtonsoft.Json.dll
+X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\bin\Debug\itextsharp.xml
+X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\bin\Debug\Newtonsoft.Json.xml
+X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\obj\Debug\Resume Creator.csproj.AssemblyReference.cache
+X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\obj\Debug\Resume_Creator.Form1.resources
+X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\obj\Debug\Resume_Creator.Properties.Resources.resources
+X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\obj\Debug\Resume Creator.csproj.GenerateResource.cache
+X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\obj\Debug\Resume Creator.csproj.CoreCompileInputs.cache
+X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\obj\Debug\Resume Creator.csproj.CopyComplete
+X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\obj\Debug\Resume Creator.exe
+X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\obj\Debug\Resume Creator.pdb
