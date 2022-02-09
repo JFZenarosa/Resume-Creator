@@ -53,21 +53,24 @@ namespace Resume_Creator
             Paragraph contactNum = new Paragraph(resumeout.Contact_num);
             Paragraph birthdate = new Paragraph(resumeout.Birthdate + "\n\n");
             Paragraph objectiveHeader = new Paragraph(resumeout.objective_Header+"\n\n", font2);
-            Paragraph objective = new Paragraph("\n"+resumeout.Objective+"\n\n");
+            Paragraph objective = new Paragraph("      "+resumeout.Objective+"\n\n");
             Paragraph educHeader = new Paragraph(resumeout.Educ_Header + "\n\n", font2);
-            Paragraph college = new Paragraph("\n"+resumeout.College+"\n\n", font3);
-            Paragraph highschool = new Paragraph(resumeout.Highschool+"\n\n", font3);
-            Paragraph elementary = new Paragraph(resumeout.Elementary+"\n\n", font3);
+            Phrase cyear = new Phrase("     " + resumeout.Cyear, font3);
+            Phrase college = new Phrase("          College                   " + resumeout.College+"\n\n", font3);
+            Phrase hsyear = new Phrase("     " + resumeout.HSyear, font3);
+            Phrase highschool = new Phrase("          Highschool             "+resumeout.Highschool+"\n\n", font3);
+            Phrase eyear = new Phrase("     " + resumeout.Eyear, font3);
+            Phrase elementary = new Phrase("          Elementary             " + resumeout.Elementary+"\n\n", font3);
             Paragraph strHeader = new Paragraph(resumeout.Str_Header + "\n\n", font2);
-            Paragraph str1 = new Paragraph("\n"+resumeout.Str1+"\n\n", font4);
-            Paragraph str2 = new Paragraph(resumeout.Str2 + "\n\n", font4);
-            Paragraph str3 = new Paragraph(resumeout.Str3 + "\n\n", font4);
-            Paragraph str4 = new Paragraph(resumeout.Str4 + "\n\n\n\n", font4);
+            Paragraph str1 = new Paragraph("\n"+ "        • " + resumeout.Str1+"\n\n", font4);
+            Paragraph str2 = new Paragraph("        • " + resumeout.Str2 + "\n\n", font4);
+            Paragraph str3 = new Paragraph("        • " + resumeout.Str3 + "\n\n", font4);
+            Paragraph str4 = new Paragraph("        • " + resumeout.Str4 + "\n\n\n\n\n", font4);
             Paragraph footer = new Paragraph(resumeout.Footer, font5);
             footer.Alignment = Element.ALIGN_CENTER;
 
-
             pdfcreator.Open();
+
             pdfcreator.Add(image);
             pdfcreator.Add(fullname); 
             pdfcreator.Add(homeAddress);            
@@ -79,8 +82,11 @@ namespace Resume_Creator
             pdfcreator.Add(objective);
             pdfcreator.Add(educHeader);
             pdfcreator.Add(horiLine);
+            pdfcreator.Add(cyear);
             pdfcreator.Add(college);
+            pdfcreator.Add(hsyear);
             pdfcreator.Add(highschool);
+            pdfcreator.Add(eyear);
             pdfcreator.Add(elementary);
             pdfcreator.Add(strHeader);
             pdfcreator.Add(horiLine);
@@ -89,6 +95,7 @@ namespace Resume_Creator
             pdfcreator.Add(str3);
             pdfcreator.Add(str4);
             pdfcreator.Add(footer);
+
             pdfcreator.Close();
             
         }
@@ -135,11 +142,23 @@ namespace Resume_Creator
             {
                 get; set;
             }
+            public string Cyear
+            {
+                get; set;
+            }
             public string Highschool
             {
                 get; set;
             }
+            public string HSyear
+            {
+                get; set;
+            }
             public string Elementary
+            {
+                get; set;
+            }
+            public string Eyear
             {
                 get; set;
             }
@@ -167,6 +186,12 @@ namespace Resume_Creator
             {
                 get; set;
             }
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -7,18 +7,23 @@
     "Image":"avatar2.png",
 
     "objective_Header":"OBJECTIVE",
-    "Objective":"       To learn and gain knowledge through experience through the internship program and help effectively amplify the skills and learning acquired. In the long run, to become an instrument in the progressive status of the company or the improvement of the company's profitability while augmenting and developing additional technical knowledge and abilities.",
+    "Objective":"To learn and gain knowledge through experience through the internship program and help effectively amplify the skills and learning acquired. In the long run, to become an instrument in the progressive status of the company or the improvement of the company's profitability while augmenting and developing additional technical knowledge and abilities.",
 
     "Educ_Header":"EDUCATION BACKGROUND",
-    "College":"      2015-2022            College                 Polytechnic University of the Philippines",
-    "Highschool":"      2011-2015            Highschool           San Felipe Neri Parochial School",
-    "Elementary":"      2008-2011            Elementary           San Felipe Neri Parochial School",
+    "College":"University of the Philippines",
+    "Cyear":"2015-2022",
+    "Highschool":"San Augustine Parochial School",
+    "HSyear":"2011-2015",
+    "Elementary":"San Augustine Parochial School",
+    "Eyear":"2008-2011",
     
     "Str_Header":"STRENGTHS",
-    "Str1":"        • Knowlegable in basic Front-End & Back-End web development",
-    "Str2":"        • Knowlegable in basic Assembly Language",
-    "Str3":"        • Team Player Attitude",
-    "Str4":"        • Able to work under pressure",
+    "Str1":"Knowlegable in basic Front-End & Back-End web development",
+    "Str2":"Knowlegable in basic Assembly Language",
+    "Str3":"Team Player Attitude",
+    "Str4":"Able to work under pressure",
 
     "Footer":"I hereby confirmed that the above statements are true with the best of my knowledge and belief."
+
+
 }
