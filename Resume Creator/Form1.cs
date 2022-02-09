@@ -38,8 +38,9 @@ namespace Resume_Creator
             PdfWriter.GetInstance(pdfcreator, new FileStream(@"X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\ZENAROSA_JAIREH.pdf",FileMode.Create));
 
 
-            iTextSharp.text.Font font1 = FontFactory.GetFont(iTextSharp.text.Font.FontFamily.TIMES_ROMAN.ToString(),28, iTextSharp.text.Font.BOLD);
-            iTextSharp.text.Font font2 = FontFactory.GetFont(iTextSharp.text.Font.FontFamily.TIMES_ROMAN.ToString(), 15, iTextSharp.text.Font.BOLD);
+            iTextSharp.text.Font font1 = FontFactory.GetFont(iTextSharp.text.Font.FontFamily.COURIER.ToString(),25, iTextSharp.text.Font.BOLD);
+            iTextSharp.text.Font font2 = FontFactory.GetFont(iTextSharp.text.Font.FontFamily.COURIER.ToString(), 16, iTextSharp.text.Font.BOLD);
+            iTextSharp.text.Font font3 = FontFactory.GetFont(iTextSharp.text.Font.FontFamily.TIMES_ROMAN.ToString(), 13);
             iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance(resumeout.Image);
             image.ScalePercent(27f);
             image.Alignment = 6;
@@ -52,6 +53,9 @@ namespace Resume_Creator
             Paragraph objectiveHeader = new Paragraph(resumeout.objective_Header+"\n\n", font2);
             Paragraph objective = new Paragraph(resumeout.Objective+"\n\n\n");
             Paragraph educHeader = new Paragraph(resumeout.Educ_Header + "\n\n", font2);
+            Paragraph college = new Paragraph(resumeout.College+"\n\n", font3);
+            Paragraph highschool = new Paragraph(resumeout.Highschool+"\n\n", font3);
+            Paragraph elementary = new Paragraph(resumeout.Elementary+"\n\n", font3);
 
 
             pdfcreator.Open();
@@ -66,6 +70,9 @@ namespace Resume_Creator
             pdfcreator.Add(objective);
             pdfcreator.Add(educHeader);
             pdfcreator.Add(horiLine);
+            pdfcreator.Add(college);
+            pdfcreator.Add(highschool);
+            pdfcreator.Add(elementary);
             pdfcreator.Close();
             
         }
@@ -105,6 +112,18 @@ namespace Resume_Creator
                 get; set;
             }
             public string Educ_Header
+            {
+                get; set;
+            }
+            public string College
+            {
+                get; set;
+            }
+            public string Highschool
+            {
+                get; set;
+            }
+            public string Elementary
             {
                 get; set;
             }
