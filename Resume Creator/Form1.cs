@@ -36,9 +36,19 @@ namespace Resume_Creator
 
             Document pdfcreator = new Document();
             PdfWriter.GetInstance(pdfcreator, new FileStream(@"X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\ZENAROSA_JAIREH.pdf",FileMode.Create));
-            pdfcreator.Open();
-            Paragraph fullname = new Paragraph(resumeout.Full_Name);
-            pdfcreator.Add(fullname);
+
+            Paragraph fullname = new Paragraph(resumeout.Full_Name+"\n\n");
+            Paragraph homeAddress = new Paragraph(resumeout.Home_Address);
+            Paragraph birthdate = new Paragraph(resumeout.Birthdate);
+            Paragraph emailAddress = new Paragraph(resumeout.Email_Address);
+            Paragraph contactNum = new Paragraph(resumeout.Contact_num);
+
+            pdfcreator.Open();            
+            pdfcreator.Add(fullname); 
+            pdfcreator.Add(homeAddress);
+            pdfcreator.Add(birthdate);
+            pdfcreator.Add(emailAddress);
+            pdfcreator.Add(contactNum);
             pdfcreator.Close();
             
         }
@@ -48,6 +58,22 @@ namespace Resume_Creator
             public string Full_Name
             {
                 get;set;
+            }
+            public string Home_Address
+            {
+                get;set;
+            }
+            public string Birthdate
+            {
+                get; set;
+            }
+            public string Email_Address
+            {
+                get; set;
+            }
+            public string Contact_num
+            {
+                get; set;
             }
         }
     }

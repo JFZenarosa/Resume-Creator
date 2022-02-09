@@ -11,6 +11,5 @@ X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\obj\Debug\Resum
 X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\obj\Debug\Resume_Creator.Properties.Resources.resources
 X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\obj\Debug\Resume Creator.csproj.GenerateResource.cache
 X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\obj\Debug\Resume Creator.csproj.CoreCompileInputs.cache
-X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\obj\Debug\Resume Creator.csproj.CopyComplete
 X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\obj\Debug\Resume Creator.exe
 X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\obj\Debug\Resume Creator.pdb
