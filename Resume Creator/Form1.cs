@@ -37,17 +37,25 @@ namespace Resume_Creator
             Document pdfcreator = new Document();
             PdfWriter.GetInstance(pdfcreator, new FileStream(@"X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\ZENAROSA_JAIREH.pdf",FileMode.Create));
 
+
+            iTextSharp.text.Font font1 = FontFactory.GetFont(iTextSharp.text.Font.FontFamily.TIMES_ROMAN.ToString(),28, iTextSharp.text.Font.BOLD);
+            iTextSharp.text.Font font2 = FontFactory.GetFont(iTextSharp.text.Font.FontFamily.TIMES_ROMAN.ToString(), 15, iTextSharp.text.Font.BOLD);
+            iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance(resumeout.Image);
+            image.ScalePercent(27f);
+            image.Alignment = 6;
             LineSeparator horiLine = new LineSeparator(4f, 100f, BaseColor.BLACK, Element.ALIGN_CENTER,1);
-            Paragraph fullname = new Paragraph("\n\n"+resumeout.Full_Name+"\n\n");
-            Paragraph homeAddress = new Paragraph(resumeout.Home_Address);
+            Paragraph fullname = new Paragraph(resumeout.Full_Name+"\n", font1);
+            Paragraph homeAddress = new Paragraph("\n"+resumeout.Home_Address);
             Paragraph birthdate = new Paragraph(resumeout.Birthdate);
             Paragraph emailAddress = new Paragraph(resumeout.Email_Address);
-            Paragraph contactNum = new Paragraph(resumeout.Contact_num+"\n\n\n\n");
-            Paragraph objectiveHeader = new Paragraph(resumeout.objective_Header+"\n\n");
-            Paragraph objective = new Paragraph(resumeout.Objective);
+            Paragraph contactNum = new Paragraph(resumeout.Contact_num+"\n\n\n");
+            Paragraph objectiveHeader = new Paragraph(resumeout.objective_Header+"\n\n", font2);
+            Paragraph objective = new Paragraph(resumeout.Objective+"\n\n\n");
+            Paragraph educHeader = new Paragraph(resumeout.Educ_Header + "\n\n", font2);
 
 
-            pdfcreator.Open();            
+            pdfcreator.Open();
+            pdfcreator.Add(image);
             pdfcreator.Add(fullname); 
             pdfcreator.Add(homeAddress);
             pdfcreator.Add(birthdate);
@@ -56,12 +64,18 @@ namespace Resume_Creator
             pdfcreator.Add(objectiveHeader);
             pdfcreator.Add(horiLine);
             pdfcreator.Add(objective);
+            pdfcreator.Add(educHeader);
+            pdfcreator.Add(horiLine);
             pdfcreator.Close();
             
         }
 
         public class jsonreader
         {
+            public string Image
+            {
+                get; set;
+            }
             public string Full_Name
             {
                 get;set;
