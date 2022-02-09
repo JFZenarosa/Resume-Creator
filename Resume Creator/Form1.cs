@@ -37,18 +37,25 @@ namespace Resume_Creator
             Document pdfcreator = new Document();
             PdfWriter.GetInstance(pdfcreator, new FileStream(@"X:\School\Visual Studio\Repository\Resume Creator\Resume Creator\ZENAROSA_JAIREH.pdf",FileMode.Create));
 
-            Paragraph fullname = new Paragraph(resumeout.Full_Name+"\n\n");
+            LineSeparator horiLine = new LineSeparator(4f, 100f, BaseColor.BLACK, Element.ALIGN_CENTER,1);
+            Paragraph fullname = new Paragraph("\n\n"+resumeout.Full_Name+"\n\n");
             Paragraph homeAddress = new Paragraph(resumeout.Home_Address);
             Paragraph birthdate = new Paragraph(resumeout.Birthdate);
             Paragraph emailAddress = new Paragraph(resumeout.Email_Address);
-            Paragraph contactNum = new Paragraph(resumeout.Contact_num);
+            Paragraph contactNum = new Paragraph(resumeout.Contact_num+"\n\n\n\n");
+            Paragraph objectiveHeader = new Paragraph(resumeout.objective_Header+"\n\n");
+            Paragraph objective = new Paragraph(resumeout.Objective);
+
 
             pdfcreator.Open();            
             pdfcreator.Add(fullname); 
             pdfcreator.Add(homeAddress);
             pdfcreator.Add(birthdate);
             pdfcreator.Add(emailAddress);
-            pdfcreator.Add(contactNum);
+            pdfcreator.Add(contactNum);            
+            pdfcreator.Add(objectiveHeader);
+            pdfcreator.Add(horiLine);
+            pdfcreator.Add(objective);
             pdfcreator.Close();
             
         }
@@ -72,6 +79,18 @@ namespace Resume_Creator
                 get; set;
             }
             public string Contact_num
+            {
+                get; set;
+            }
+            public string objective_Header
+            {
+                get; set;
+            }
+            public string Objective
+            {
+                get; set;
+            }
+            public string Educ_Header
             {
                 get; set;
             }

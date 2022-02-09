@@ -1,7 +1,13 @@
 {
     "Full_Name":"Jaireh Zenarosa",
     "Home_Address":"123 Somewhere st. brgy Somewhere, Mandaluyong city, 1550",
-    "Email_Address" : "Jaireh@yahoo.com",
+    "Email_Address" : "Jaireh@yahoo.com/JZ123@Gmail.com",
     "Birthdate":"January 1, 1995",
-    "Contact_num":"532-1234/(+63)977-123-4567"
+    "Contact_num":"532-1234/(+63)977-123-4567",
+
+    "objective_Header":"OBJECTIVE",
+    "Objective":"To learn and gain knowledge through experience through the internship program and help effectively amplify the skills and learning acquired. In the long run, to become an instrument in the progressive status of the company or the improvement of the company's profitability while augmenting and developing additional technical knowledge and abilities.",
+
+    "Educ_Header":"EDUCATION BACKGROUND"
+
 }
