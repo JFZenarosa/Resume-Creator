@@ -39,32 +39,41 @@ namespace Resume_Creator
 
 
             iTextSharp.text.Font font1 = FontFactory.GetFont(iTextSharp.text.Font.FontFamily.COURIER.ToString(),25, iTextSharp.text.Font.BOLD);
-            iTextSharp.text.Font font2 = FontFactory.GetFont(iTextSharp.text.Font.FontFamily.COURIER.ToString(), 16, iTextSharp.text.Font.BOLD);
+            iTextSharp.text.Font font2 = FontFactory.GetFont(iTextSharp.text.Font.FontFamily.COURIER.ToString(), 17, iTextSharp.text.Font.BOLD);
             iTextSharp.text.Font font3 = FontFactory.GetFont(iTextSharp.text.Font.FontFamily.TIMES_ROMAN.ToString(), 13);
+            iTextSharp.text.Font font4 = FontFactory.GetFont(iTextSharp.text.Font.FontFamily.TIMES_ROMAN.ToString(), 13, iTextSharp.text.Font.BOLD);
+            iTextSharp.text.Font font5 = FontFactory.GetFont(iTextSharp.text.Font.FontFamily.TIMES_ROMAN.ToString(), 8);
             iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance(resumeout.Image);
             image.ScalePercent(27f);
             image.Alignment = 6;
             LineSeparator horiLine = new LineSeparator(4f, 100f, BaseColor.BLACK, Element.ALIGN_CENTER,1);
             Paragraph fullname = new Paragraph(resumeout.Full_Name+"\n", font1);
-            Paragraph homeAddress = new Paragraph("\n"+resumeout.Home_Address);
-            Paragraph birthdate = new Paragraph(resumeout.Birthdate);
+            Paragraph homeAddress = new Paragraph("\n"+resumeout.Home_Address);            
             Paragraph emailAddress = new Paragraph(resumeout.Email_Address);
-            Paragraph contactNum = new Paragraph(resumeout.Contact_num+"\n\n\n");
+            Paragraph contactNum = new Paragraph(resumeout.Contact_num);
+            Paragraph birthdate = new Paragraph(resumeout.Birthdate + "\n\n");
             Paragraph objectiveHeader = new Paragraph(resumeout.objective_Header+"\n\n", font2);
-            Paragraph objective = new Paragraph(resumeout.Objective+"\n\n\n");
+            Paragraph objective = new Paragraph("\n"+resumeout.Objective+"\n\n");
             Paragraph educHeader = new Paragraph(resumeout.Educ_Header + "\n\n", font2);
-            Paragraph college = new Paragraph(resumeout.College+"\n\n", font3);
+            Paragraph college = new Paragraph("\n"+resumeout.College+"\n\n", font3);
             Paragraph highschool = new Paragraph(resumeout.Highschool+"\n\n", font3);
             Paragraph elementary = new Paragraph(resumeout.Elementary+"\n\n", font3);
+            Paragraph strHeader = new Paragraph(resumeout.Str_Header + "\n\n", font2);
+            Paragraph str1 = new Paragraph("\n"+resumeout.Str1+"\n\n", font4);
+            Paragraph str2 = new Paragraph(resumeout.Str2 + "\n\n", font4);
+            Paragraph str3 = new Paragraph(resumeout.Str3 + "\n\n", font4);
+            Paragraph str4 = new Paragraph(resumeout.Str4 + "\n\n\n\n", font4);
+            Paragraph footer = new Paragraph(resumeout.Footer, font5);
+            footer.Alignment = Element.ALIGN_CENTER;
 
 
             pdfcreator.Open();
             pdfcreator.Add(image);
             pdfcreator.Add(fullname); 
-            pdfcreator.Add(homeAddress);
+            pdfcreator.Add(homeAddress);            
+            pdfcreator.Add(emailAddress);            
+            pdfcreator.Add(contactNum);
             pdfcreator.Add(birthdate);
-            pdfcreator.Add(emailAddress);
-            pdfcreator.Add(contactNum);            
             pdfcreator.Add(objectiveHeader);
             pdfcreator.Add(horiLine);
             pdfcreator.Add(objective);
@@ -73,6 +82,13 @@ namespace Resume_Creator
             pdfcreator.Add(college);
             pdfcreator.Add(highschool);
             pdfcreator.Add(elementary);
+            pdfcreator.Add(strHeader);
+            pdfcreator.Add(horiLine);
+            pdfcreator.Add(str1);
+            pdfcreator.Add(str2);
+            pdfcreator.Add(str3);
+            pdfcreator.Add(str4);
+            pdfcreator.Add(footer);
             pdfcreator.Close();
             
         }
@@ -124,6 +140,30 @@ namespace Resume_Creator
                 get; set;
             }
             public string Elementary
+            {
+                get; set;
+            }
+            public string Str_Header
+            {
+                get; set;
+            }
+            public string Str1
+            {
+                get; set;
+            }
+            public string Str2
+            {
+                get; set;
+            }
+            public string Str3
+            {
+                get; set;
+            }
+            public string Str4
+            {
+                get; set;
+            }
+            public string Footer
             {
                 get; set;
             }

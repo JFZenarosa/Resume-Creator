@@ -13,5 +13,12 @@
     "College":"      2015-2022            College                 Polytechnic University of the Philippines",
     "Highschool":"      2011-2015            Highschool           San Felipe Neri Parochial School",
     "Elementary":"      2008-2011            Elementary           San Felipe Neri Parochial School",
+    
+    "Str_Header":"STRENGTHS",
+    "Str1":"        • Knowlegable in basic Front-End & Back-End web development",
+    "Str2":"        • Knowlegable in basic Assembly Language",
+    "Str3":"        • Team Player Attitude",
+    "Str4":"        • Able to work under pressure",
 
+    "Footer":"I hereby confirmed that the above statements are true with the best of my knowledge and belief."
 }
